@@ -1,0 +1,44 @@
+name: "Replication website"
+author: "Rob Franken"
+date: "Last compiled on `r format(Systime(), '%B, %Y')"
+output_dir: "docs"
+exclude: 
+  - "data"
+  - "rawdata"
+  - "processed"
+bibliography: references.bib
+navbar:
+  left:
+    - icon: fa-info
+      text: "About"
+      href: index.html
+    - icon: far fa-file-code  
+      text: "Preparation"
+      menu:
+      - text: "1. Selecting alters"
+        href: alters.html
+      - text: "2. Constructing dataset"  
+        href: prep.html
+    - icon: fa fa-bar-chart
+      text: "Analyses"
+      href: analysis.html
+      
+#  right:
+#    - icon: fab fa-github
+#      href: https://github.com/robfranken/networkchange
+output:
+  html_document:
+    theme: flatly
+    highlight: default
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: show
+    code_download: true
+    css: tweaks.css
+    include:
+      after_body: footer.html
+
+
+
+
