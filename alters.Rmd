@@ -1599,6 +1599,23 @@ write.csv(df, file="./data/processed/ego_alter_project.csv")
         
 <br>
 
+# output
+
+```{r, echo=F}
+ego <- read.csv("./data/processed/ego_alter_project.csv")
+ego$ego_firstname <- ego$ego_lastname <- ego$ego_email <- ego$altername <- "***"
+names(ego)[1] <- ""
+
+options(knitr.kable.NA='')
+
+knitr::kable(head(ego,200), digit=2, "html", caption="First 200 rows of output") %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  kableExtra::scroll_box(width = "100%", height = "300px")
+
+```
+
+
+
 ----
 
 ### References
