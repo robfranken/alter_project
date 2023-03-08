@@ -23,9 +23,9 @@ navbar:
       text: "Analyses"
       href: analysis.html
       
-#  right:
-#    - icon: fab fa-github
-#      href: https://github.com/robfranken/networkchange
+  right:
+    - icon: fab fa-github
+      href: https://github.com/robfranken/alter_project
 output:
   html_document:
     theme: flatly
